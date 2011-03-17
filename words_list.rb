@@ -1,5 +1,3 @@
-t remote add origin git@github.com:christophebiocca/WordsList.git
-  git push -u origin master
 #!/usr/bin/ruby
 
 class WordsList
