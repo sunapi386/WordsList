@@ -1,3 +1,5 @@
+t remote add origin git@github.com:christophebiocca/WordsList.git
+  git push -u origin master
 #!/usr/bin/ruby
 
 class WordsList
@@ -47,7 +49,6 @@ class WordsList
     full_regex = Regexp.compile("\\A" + wildcard.split(//).collect do |letter|
       (letter == "_") ? underscore_regex : Regexp.escape(letter)
     end.join + "\\Z", Regexp::IGNORECASE)
-    puts(full_regex)
     return regex_filter(full_regex)
   end
 end

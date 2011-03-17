@@ -1,0 +1,5 @@
+How to use this when playing hangman:
+
+Require the library from within irb.
+Start by creating a WordsList with words of your choosing (WordsList.new([list, of, words]), or just use WordsList.all_words for the contents of the unix dictionary (which is assumed to be in /usr/share/dict/words).
+Then you can just call w.hangman_filter based on the pattern and set of missed letters. On any words list, you can request letter distributions (strickly speaking, it gives the percentage of words that have the letter, which is more useful in hangman anyways), and you can simply look at the number of words or filter further (you can filter with a regex or block if you want as well).
