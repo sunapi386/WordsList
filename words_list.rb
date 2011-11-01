@@ -8,9 +8,8 @@ class WordsList
     @all_words ||= (
       list = []
       File.open("/usr/share/dict/words") do |file|
-        file.each_line{|l| list << l.chomp}
+        new(file.each_line.collect(&:chomp))
       end
-      new(list)
     )
   end
 
